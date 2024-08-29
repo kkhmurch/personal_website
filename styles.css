@@ -1,0 +1,544 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+}
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+  }
+
+.navbar-container {
+    background: #131313;
+    height: 80px;
+    font-size: 1.2rem;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    width: 1400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar__logo,
+.title {
+  color: #ffffff;
+    /* background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%); */
+    background-size: 100%;
+    /* -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar__item {
+    height: 40px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__links:hover {
+    color: #BAA900;
+    transition: all 0.3s ease;
+}
+
+.main {
+    background-color: #141414;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 10rem;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    margin: 0 auto;
+    margin-bottom: -1;
+    height: 90vh;
+    /* background-color: #141414; */
+    background:
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.main__content {
+    position: relative;
+    color: #fff;
+    width: 100%;
+}
+
+.main__content h1 {
+    font-size: 4rem;
+    font-color: white;
+
+    /* background-color: #ff8177;
+    background-image: linear-gradient(to top, #0a424a 0%, #9ee9f2 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
+}
+
+.text-wrapper span {
+    margin-top: 1rem;
+    font-size: 2rem;
+    /* background-image: linear-gradient(to top, #b721ff 0%, #21d4fd 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
+      /* color: #68233F; */
+      color: #BAA900;
+}
+
+#main__img {
+    width: 40%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2; /* Ensures the image is above the SVG */
+}
+
+#main__img:hover{
+  transform: scale(1.075);
+  transition: 0.2s ease-in;
+}
+
+.main__img--container{
+  width: 500px;
+  height: auto;
+}
+
+.image-blob-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Ensures the container scales with the parent */
+   height: auto;
+   min-width: 316px; /* Minimum width */
+   min-height: 316px; /* Minimum height */
+}
+
+.blob-motion {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    min-width: 316px; /* Ensure SVG scales with the container */
+    min-height: 316px; /* Ensure SVG scales with the container */
+    z-index: 1; /* Ensures the blob is behind the image */
+}
+
+.image-blob-container{
+  width: 500px;
+  height: 500px;
+}
+
+.blobs {
+    text-align: center;
+    color: #fff;
+}
+
+.spacer.layer2 {
+    margin-top: 1rem;
+}
+
+
+.b1 {
+    animation: ani1 9s infinite;
+}
+
+.b2 {
+    animation: ani2 9s infinite;
+}
+
+.b3 {
+    animation: ani3 9s infinite;
+}
+
+@keyframes ani1 {
+    0%, 33.33%, 100% {
+        opacity: 0;
+    }
+    11.11%, 22.22% {
+        opacity: 1;
+    }
+}
+
+@keyframes ani2 {
+    0%, 33.33%, 66.66%, 100% {
+        opacity: 0;
+    }
+    44.44%, 55.55% {
+        opacity: 1;
+    }
+}
+
+@keyframes ani3 {
+    0%, 66.66%, 100% {
+        opacity: 0;
+    }
+    77.77%, 88.88% {
+        opacity: 1;
+    }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .main__container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 100%;
+        margin: 0 auto;
+        height: 90vh;
+    }
+
+    .main__content {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main__content h1 {
+        font-size: 2.5rem;
+        margin-top: 2rem;
+    }
+
+    .text-wrapper span {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main__content h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    .main__content h2 {
+        font-size: 2rem;
+    }
+
+    .text-wrapper span {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    background-color: #141414;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(131% + 1.3px);
+    height: 180px;
+}
+
+.wave .shape-fill {
+    fill: url(#waveGradient);
+    /* fill: #FFFFFF; */
+}
+
+
+
+.projects {
+
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+
+  background:
+    /* linear-gradient(to bottom, transparent, #c6bfbf),
+  linear-gradient(to right, white, #c6bfbf, white); */
+
+  linear-gradient(to bottom, transparent, #d9d8ce),
+linear-gradient(to right, white,  #d9d8ce, white);
+
+
+
+
+/* Ensure the gradient covers the entire page */
+min-height: 100vh;
+margin: 0;
+}
+
+.projects h1 {
+  background-color: #BAA900;
+  /* background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  ); */
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+  text-align: center; /* This centers the text horizontally */
+  display: flex;       /* Added for alignment */
+  justify-content: center; /* Centers horizontally in flexbox */
+  align-items: center; /* Centers vertically if needed */
+
+
+}
+
+.services__container {
+  padding: 0 10vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  top: 300px;
+  left: 50px;
+}
+
+.services__container::-webkit-scrollbar {
+  display: none;
+}
+
+.services__card {
+  flex: 0 0 auto;
+  margin: 1rem;
+  height: 525px;
+  width: 400px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url('../my_portfolio/images/wallpaperCoCoSurr.png');
+}
+
+.services__card:before {
+  opacity: 0.2;
+}
+
+.services__card:nth-child(2) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      /* rgba(0, 0, 0, 1) 100%, */
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url('../my_portfolio/images/wp_gen_gest.png');
+}
+
+.services__card:nth-child(3) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      /* rgba(0, 0, 0, 1) 100%, */
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url('../my_portfolio/images/elevator.jpg');
+    background-size: 150% 100%; /* 50% of the element's width and height */
+    background-repeat: no-repeat;
+
+}
+
+.services__card:nth-child(4) {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.5) 0%,
+      /* rgba(0, 0, 0, 1) 100%, */
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url('../my_portfolio/images/rp_wallpaper.jpg');
+    background-size: 100% 120%; /* 50% of the element's width and height */
+    background-repeat: no-repeat;
+
+}
+
+.services__card h2{
+  color: #fff;
+  position: relative;
+  top: 400px;
+  left: 50px;
+  font-size: 1.3rem bold;
+  font-family: "Courier New", monospace;
+}
+.services__card p{
+  color: #fff;
+  position: relative;
+  top: 350px;
+  left: 50px;
+  font-size: 1.3rem;
+
+}
+
+.services__card:hover {
+  transform: scale(1.075);
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+.project_button {
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #BAA900;
+  position: relative;
+  top: 400px;
+  left: 50px;
+  font-size: 1rem;
+  transition: all 0.35s;
+  /* overflow: hidden; */
+}
+
+.project_button:after {
+  color: #fff;
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #bb004b;
+  transition: all 0.35s;
+  border-radius: 4px;
+  z-index: 1;
+
+}
+
+.project_button:hover {
+  color: #fff;
+}
+
+.project_button:hover:after {
+  color: #fff;
+  width: 100%;
+  z-index: 0;
+}
+
+.project_button span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+
+.pre-btn,
+.nxt-btn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 960px) {
+  .projects {
+    height: 1200px;
+  }
+
+  .projects h1 {
+    font-size: 2rem;
+    margin-top: 12rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects {
+    height: 1400px;
+  }
+
+  .projects h1 {
+    font-size: 1.2rem;
+  }
+
+  .services__card {
+    width: 300px;
+  }
+}
+
+.spacer{
+  aspect-ratio: 900/200;
+  width:100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.layer1{
+  background-image: url('./footer_waves.svg');
+}
