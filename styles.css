@@ -81,10 +81,10 @@ html {
     align-items: center;
     justify-self: center;
     margin: 0 auto;
-    margin-bottom: -1;
+    margin-bottom: -1px;
     height: 90vh;
     /* background-color: #141414; */
-    background:
+    /*background:*/
     z-index: 1;
     width: 100%;
     max-width: 1300px;
@@ -272,13 +272,17 @@ html {
     line-height: 0;
     transform: rotate(180deg);
     background-color: #141414;
+    /*margin-bottom: 0;*/
+    /*padding-bottom: 0;*/
 }
 
 .wave svg {
     position: relative;
     display: block;
     width: calc(131% + 1.3px);
-    height: 180px;
+    height: 130px;
+    margin-bottom: -1px;
+
 }
 
 .wave .shape-fill {
@@ -293,7 +297,6 @@ html {
   position: relative;
   overflow: hidden;
   padding: 20px;
-
   background:
     /* linear-gradient(to bottom, transparent, #c6bfbf),
   linear-gradient(to right, white, #c6bfbf, white); */
@@ -322,7 +325,6 @@ margin: 0;
   ); */
   background-size: 100%;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
   margin-bottom: 5rem;
@@ -359,7 +361,7 @@ margin: 0;
       rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 1) 100%
     ),
-    url('../my_portfolio/images/wallpaperCoCoSurr.png');
+    url('../personal_website/images/wallpaperCoCoSurr.png');
 }
 
 .services__card:before {
@@ -373,7 +375,7 @@ margin: 0;
       /* rgba(0, 0, 0, 1) 100%, */
       rgba(0, 0, 0, 1) 100%
     ),
-    url('../my_portfolio/images/wp_gen_gest.png');
+    url('../personal_website/images/wp_gen_gest.png');
 }
 
 .services__card:nth-child(3) {
@@ -383,7 +385,7 @@ margin: 0;
       /* rgba(0, 0, 0, 1) 100%, */
       rgba(0, 0, 0, 1) 100%
     ),
-    url('../my_portfolio/images/elevator.jpg');
+    url('../personal_website/images/elevator.jpg');
     background-size: 150% 100%; /* 50% of the element's width and height */
     background-repeat: no-repeat;
 
@@ -396,7 +398,7 @@ margin: 0;
       /* rgba(0, 0, 0, 1) 100%, */
       rgba(0, 0, 0, 1) 100%
     ),
-    url('../my_portfolio/images/rp_wallpaper.jpg');
+    url('../personal_website/images/rp_wallpaper.jpg');
     background-size: 100% 120%; /* 50% of the element's width and height */
     background-repeat: no-repeat;
 
@@ -407,7 +409,7 @@ margin: 0;
   position: relative;
   top: 400px;
   left: 50px;
-  font-size: 1.3rem bold;
+  font: 1.3rem bold;
   font-family: "Courier New", monospace;
 }
 .services__card p{
